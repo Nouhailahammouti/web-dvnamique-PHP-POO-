@@ -1,0 +1,51 @@
+1/La Partie POO
+
+<?php
+
+classe Product {
+$public $id;
+$prive $prix
+
+ public function Getprix(){
+ retunt $this->$prix; 
+
+ }
+
+public functio Seetprix($p)
+ {
+  $this->$prix=$p
+}
+
+ public  function   estCher (){
+   if ($this-$prix>100){
+ retune  true
+   }
+ retune  false;
+ }
+}
+
+$$p1 =new Proudact();
+$p1->$id=1;
+$p1->Setprix(400);
+$$p2 =new Proudact();
+$p2->$id=2;
+$p2->Setprix(300);
+ $misproudact=[$p1,$p2]
+
+
+
+
+$composent=0
+
+
+foreach($misproudacts as $pro)
+
+if ($pro->estCher ==true)
+
+{
+$composent ++
+}
+ echo 'nombre  est :'$composent ++
+
+
+?>
