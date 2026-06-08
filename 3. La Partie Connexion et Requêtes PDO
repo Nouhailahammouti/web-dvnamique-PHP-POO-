@@ -1,0 +1,15 @@
+1/L-Ittissal (La Connexion):
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=gestion_stock", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
+
+2/Exécution d'une Requête Préparée (Lecture/SELECT):
+// 1. Préparer la requête
+$stmt = $pdo->prepare("SELECT * FROM produits WHERE categorie = :cat");
+// 2. Exécuter m3a l-données
+$stmt->execute(['cat' => 'Électronique']);
+// 3. Jbed kolchi f un tableau associatif
+$les_produits = $stmt->fetchAll(PDO::FETCH_ASSOC);
