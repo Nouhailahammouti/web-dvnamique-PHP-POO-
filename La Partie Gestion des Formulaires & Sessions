@@ -1,0 +1,17 @@
+1/Récupération les données (POST):
+
+if (isser($_post['valider'])){
+$nominput=$_post['nome_user'];
+if (!empty ($nominput)){
+echo 'Bonjour MM/S'$nominput;
+}
+  }
+
+
+2/Gestion des les Sessions (Authentification):
+
+
+seseion_start();
+$_SEESION ['username']='AMINE';
+echo $_SEESION ['username'];
+ session_destroy();
